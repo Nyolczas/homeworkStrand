@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/strand.css">
+    <title>Strand!</title>
+</head>
+
+<body>
+    <div id="container">
+        <div class="potlo">-</div>
+        <header>
+            <h1>Strand!</h1>
+        </header>
+        <main>
+            <aside>
+                <ul>
+                    <li><a href="#s1">Balaton</a></li>
+                    <li><a href="#s2">Tisza-tó</a></li>
+                    <li><a href="#s3">Szelidi-tó</a></li>
+                </ul>
+                <form action="feldolgoz.php" method="post">
+                    <h2>Személyre szabott szállásajánlatokért, <br> töltse ki az alábbi űrlapot!</h2>
+                    <div>
+                        <label>Név:*</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div>
+                        <label>Email-cím:*</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label>Telefonszám:*</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div>
+                        <label>Melyik tó érdekli?</label>
+                        <select name="to" size="1" id="to">
+                        <option value="egyiksem"></option>
+                      <option value="Balaton">Balaton</option>
+                      <option value="Tisza-tó">Tisza-tó</option>
+                      <option value="Szelidi-tó">Szelidi-tó</option>
+                          </select>
+
+                    </div>
+                    <label>Milyen szállást keres?</label>
+                    <div>
+                        <input type="checkbox" name="szallas[]" id="szallas1" value="szálloda" checked>szálloda<br>
+                        <input type="checkbox" name="szallas[]" id="szallas2" value="apartman" checked>apartmanház<br>
+                        <input type="checkbox" name="szallas[]" id="szallas3" value="kemping" checked>kemping<br>
+                    </div>
+                    <label>Milyen ellátás legyen?</label>
+                    <div>
+                        <input type="radio" name="ellatas" id="ellatas1" value="teljes" checked>teljes<br>
+                        <input type="radio" name="ellatas" id="ellatas2" value="felpanzio">fél panzió<br>
+                        <input type="radio" name="ellatas" id="ellatas3" value="reggeli">csak reggeli<br>
+                        <input type="radio" name="ellatas" id="ellatas4" value="nemker">nem kérek ellátást<br>
+                    </div>
+                    <div>
+                        <label>Egyéb üzenet:</label>
+                        <textarea name="message" id="message" cols="50" rows="10"></textarea>
+                    </div>
+                    <p>* a csillaggal jelölt mezők kitöltése kötelező!</p>
+                    <div>
+                        <input type="submit" id="submit" name="submit" value="Mehet">
+                    </div>
+                </form>
+            </aside>
+            <div class="sgrp">
+                <section id="s1">
+                    <h3>Balaton</h3>
+                    <figure>
+                    <img alt="balatoni strand" name="balatoni strand" src="img/balatonistrand.jpg">
+                    <figcaption> <q>    jajj, úgy élvezem én a strandot ...</q> </figcaption>
+                    </figure>
+                    <p>Idén kiugróan javult a balatoni strandok szolgáltatásainak színvonala - mondta Balassa Balázs, a Balatoni Szövetség elnöke Siófokon, a Kék Hullám Zászló minősítést átadó ünnepségen, a zászlót 33 balatoni strand kapta meg.</p>
+                    <p>A legjobbaknak járó ötcsillagos Kék Hullám Zászlót tízen érdemelték ki: Vonyarcvashegy Lidó strandja, Balatongyörök Községi strandja, Gyenesdiás Diási Játékstrandja, Szigliget Községi strandfürdője, Balatonfüred Kisfaludy és Eszterházy strandja, Balatonlelle Napfény strandja, Csopak Községi strandja, Keszthely Városi strandja és Balatonakali Községi strandja. A többi 23 strand négy- és háromcsillagos minősítést ért el.</p>
+                    <p>Kétévenként hirdetik meg a legcsaládbarátabb strandnak járó díjat, amit idén a gyenesidási Diás Játékstrandnak ítéltek oda, továbbá a legsportosabb strandnak járó díjat, amit 2015 után újra a vonyarcvashegyi Lido strand nyert el. A leginkább kerékpáros-barát strandnak járó különdíj és vándorserleg ismét a balatonberényi Közösségi strandé lett. Az idei abszolút nyertes a balatongyöröki strand lett.</p>
+                    <p>A helyi önkormányzatokat tömörítő BSZ által 13 éve elindított strandminősítő rendszer idén tovább finomodott, a szolgáltatások színvonalát a korábbi három helyett már öt fokozattal, öt csillaggal jelölték. A június második felében elvégzett minősítésbe bevontak több balatoni civil társszervezetet, valamint a Balaton-felvidéki Nemzeti Park Igazgatóságot is. A Balaton körül mintegy 90 hivatalos strand található.</p>
+                </section>
+                <section id="s2">
+                    <h3>Tisza-tó</h3>
+                    <figure>
+                        <img alt="tisza-tó strand" name="tisza-tó strand" src="img/tiszatostrand.JPG">
+                        <figcaption> menő cuccok a vizen </figcaption>
+                    </figure>
+                    <p> A Tisza-tó Kelet-Magyarország legnagyobb, Magyarország második legnagyobb tava. Ez a mesterségesen, a Tisza duzzasztásával létrehozott 127 négyzetkilométeres vizfelület ma egyedülálló ökoturisztikai paradicsom. Aki belföldön üdülését, nyaralását tervezgeti, s vizpart mellet szeretné tölteni, jusson eszébe a Tisza-tó, ez a folyamatosn fejlődő, s a nyári zsúfoltságot mellőző klasz hely! </p>
+                    <p>Páratlan természeti értékek, kerékpározás, horgászat, vízi sportok, kulturális programok- a Tisza-tó mellett minden együtt van a felejthetetlen nyaraláshoz. S persze a strandok, melyek vízminősége évről-évre kiváló minősítést kap. Mivel nálunk nem nagyok a távolságok sem , akár mind a hat, szuper szabadvizű strandot érdemes felkeresni, kipróbálni.</p>
+                    <p>Pezsgő a strandi élet, beach hangulat, disco-k, koncertek, élmény-gazdag programok váltják egymást. A vízi sportok fellegvára. Bérelhető: vízibanán, jet-ski, motorcsónak, SUP, és kenu, kipróbálhatod a vízi ejtőernyőzést, a vízisít, a wakesurf-öt.</p>
+                    <p>A Kiskörei Strand sajátossága, hogy a strand itt van legközelebb a folyó medréhez, így a nyári hőségben szinte a Tiszában lubickolhat a hűsölni vágyó látogató. Itt az aktívabb pihenést előnyben részesítők is megtalálhatják számításukat. Többek között csúszda, motorcsónak, banán, gömbi, kajak-kenu, jet-ski, úszás, strandfoci pálya és szabadtéri mozi szerepel az ajánlatok között.</p>
+                </section>
+
+                <section id="s3">
+                    <h3>Szelidi-tó</h3>
+                    <figure>
+                    <img alt="szelidi-tó strand" name="szelidi-tó strand" src="img/szelidistrand.jpg">
+                    <figcaption> A szelidi tóról nincs normális fotó az interneten! <br> Járnak ide egyáltalán emberek?! </figcaption>
+                    </figure>
+                    <p>Szelid neve a közeli Várdomb erõdítményével és a török idõk harcaival függhet össze, ugyanis a török csapatok a magyar túlerõt látva, megállásra és kompromisszumokra kényszerültek "megszelidültek" ezen a területen.</p>
+                    <p>A tavat a még a Duna vize mélyített ki évezredekkel ezelõtt. Jelenleg 4km hosszú, szélessége átlagosan 150-200m között mozog, átlagos vízmélysége 3-4 méter, vize nyáron akár 28°C-ra is felmelegedhet, így fürdõzésre kiválóan alkalmas. A talajból sok nátrium-magnézium-karbonát és nátrium-jodid oldódik ki, ezért már a középkorban sebgyógyításra használták, ma inkább idegrendszeri, hormonális és reumatikus bántalmak kezelésére ajánlják. </p>
+                    <p>Vize szagtalan a gyógyfürdõkkel ellentétben, jelenleg még nem minõsített gyógyvíz, ezért üdülõfalu létesült a környezetében.</p>
+                    <p>Egy másik legenda szerint Bence vitéz úgy meghajszolta lovait hogy azok patái elvástak. De miután a lovak hosszasan a tó vizében állva ittak sebeik gyorsan rendbe jöttek.</p>
+                    <p>Szeliden 2000-ben újították fel a Kastély Szállót, a jövõbeni tervek szerint gyógykezelésekre alkalmas létesítményeket is létrehoznak benne. A kastély egykoriban a kalocsai érsek pihenõ kastélya volt.</p>
+                    <p>A Szelidi-tavat 360 hektáros természetvédelmi terület övezi, ami növényi gazdagságával a Kiskunsági Nemzeti Park egyik gyöngyszeme. A tó környékén így kellemes sétákat vagy kerékpártúrákat tehet az idelátogató.</p>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <h1>Dudás Péter DizájnGuru</h1>
+        </footer>
+        <div class="potlo">-</div>
+    </div>
+
+</body>
+
+</html>
